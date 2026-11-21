@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Datacheck Quality Monitor">
+  <rect width="32" height="32" rx="8" fill="#0c0c11"/>
+  <rect x="1" y="1" width="30" height="30" rx="7.5" fill="none" stroke="#2d2d34"/>
+  <path d="M16 7 25 16 16 25 7 16Z" fill="none" stroke="#9884f3" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="16" cy="16" r="2.4" fill="#9884f3"/>
+</svg>
