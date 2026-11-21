@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign in · Datacheck Quality Monitor</title>
+    <meta name="description" content="Sign in to Datacheck Quality Monitor to review validation runs, rule history and failing rows for your warehouse datasets.">
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body class="dc-login-page">
+    <main class="dc-login">
+      <section class="dc-login__card" aria-labelledby="signin-title">
+        <p class="dc-login__brand"><span aria-hidden="true">◆</span> Datacheck Quality Monitor</p>
+        <h1 class="dc-login__title" id="signin-title">Sign in to your quality workspace</h1>
+        <p class="dc-login__sub">
+          Validation results, rule history and the failing rows behind every failed check.
+        </p>
+
+        <div class="dc-banner" id="signin-banner" role="alert" hidden></div>
+
+        <form class="dc-form" id="signin-form" method="post" action="/api/auth/signin"
+              data-next="{{ next_url }}" novalidate>
+          <div class="dc-field" id="email-field">
+            <label for="email">Work email</label>
+            <input class="dc-input" id="email" name="email" type="email"
+                   autocomplete="username" inputmode="email" autocapitalize="none"
+                   spellcheck="false" aria-describedby="email-error" required>
+            <p class="dc-field__error" id="email-error" role="alert"></p>
+          </div>
+
+          <div class="dc-field" id="password-field">
+            <label for="password">Password</label>
+            <div class="dc-input-group">
+              <input class="dc-input" id="password" name="password" type="password"
+                     autocomplete="current-password" aria-describedby="password-error" required>
+              <button class="dc-btn dc-btn--ghost dc-toggle-pass" id="toggle-password" type="button"
+                      aria-pressed="false" aria-label="Show password">Show</button>
+            </div>
+            <p class="dc-field__error" id="password-error" role="alert"></p>
+          </div>
+
+          <button class="dc-btn dc-btn--primary dc-btn--block" id="signin-submit" type="submit">
+            Sign in
+          </button>
+        </form>
+
+        <div class="dc-demo">
+          <p class="dc-label">Demo credentials</p>
+          <p class="dc-demo__hint">Demo: cenius@cenius.ai / cenius</p>
+          <p class="dc-demo__note">
+            Preview account: <code>demo@datacheck.io</code> / <code>demo1234</code>.
+            Demo accounts are for evaluation only — remove them before a production deploy.
+          </p>
+          <button class="dc-btn dc-btn--ghost dc-btn--block" id="demo-fill" type="button">
+            Use demo credentials
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="/static/login.js" defer></script>
+  </body>
+</html>
