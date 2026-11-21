@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# Local environment
+.env
+
+# Local SQLite database (created and seeded on first boot)
+*.db
+*.db-wal
+*.db-shm
+
+# Tooling
+.venv/
+.ruff_cache/
+.DS_Store
+
+# Tooling
+.ruff_cache/

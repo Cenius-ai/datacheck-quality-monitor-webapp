@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datacheck-quality-monitor"
+version = "1.0.0"
+description = "An open-source Plotly Dash dashboard for dataset validation rules, rule history and failing-row samples."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["data-quality", "validation", "dash", "plotly", "great-expectations"]
+# Runtime pins live in requirements.txt (the install contract); this manifest
+# carries packaging metadata and tool configuration only.
+dependencies = []
+
+[tool.setuptools]
+packages = ["datacheck"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
