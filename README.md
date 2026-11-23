@@ -31,7 +31,7 @@ See [`INSTALL.md`](INSTALL.md) for full setup and usage instructions.
 
 ## Architecture
 
-`install.sh` wires up dependencies and loads seed records; after it runs the app has real data to show. The Full-stack app codebase (78 files) is self-contained — no external services needed to evaluate it. Top-level layout: `datacheck/`, `docs/`, `tests/`. Full setup details: [`INSTALL.md`](INSTALL.md).
+`install.sh` wires up dependencies and loads seed records; after it runs the app has real data to show. The Full-stack app codebase (68 files) is self-contained — no external services needed to evaluate it. Top-level layout: `datacheck/`, `docs/`, `tests/`. Full setup details: [`INSTALL.md`](INSTALL.md).
 
 ## Features
 
